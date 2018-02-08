@@ -6,25 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music Is Fun!</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
-        </div>
-    </form>
-    <div id="songs">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-12 header">
+                <h1>Jive Now!</h1>
+                <div class="searchBar">
+                    <nav class="navbar navbar-light bg-light">
+                        <form class="form-control" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+                            <input class="form-control mr-sm-2" type="search" onfocus="this.value=''" name="artist" placeholder="Artist Name" aria-label="Search">
+                            <button class="btn btn-outline-alert my-2 my-sm-0" type="submit" id="get-music-button">get Music</button>
+                        </form>
+                    </nav>
 
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-6-12 section">
+            </div>
+            <div class="row" id="musicResults">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 footer copyright">
+                <h5>©ResearchDrivenMarketing 2018</h5>
+            </div>
+        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script src="itunes-service.js"></script>
-    <script src="itunes-controller.js"></script>
-    <script src="app.js"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js "></script>
+    <script src="itunes-service.js "></script>
+    <script src="itunes-controller.js "></script>
+    <script src="app.js "></script>
 </body>
+
+
+
+
+
 
 </html>
